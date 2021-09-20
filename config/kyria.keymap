@@ -31,6 +31,7 @@
             key-positions = <14 15>;
             bindings = <&kp LBRC>;
         };
+        // st is a bit too common as an inward roll to use for a combo
         combo_bracket_curly_close {
             timeout-ms = <50>;
             key-positions = <15 16>;
@@ -48,10 +49,10 @@
 // | SHIFT |  Z  |  X  |  C   |  D   |  V   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  K   |  H    |  ,    |  .   |   /   | CTRL |
 //                     | DEL  | GUI  | RET  |  SPACE  |  LOWER  |  |  RAISE  |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&trans  &kp Q       &kp W           &kp F       &kp P           &kp B                                                                       &kp J           &kp L       &kp U       &kp Y       &kp SEMI    &to 1
-	&trans  &hm LALT A  &hm LCTRL R     &hm LGUI S  &hm LSHFT T     &kp G                                                                       &kp M           &hm LSHFT N &hm LGUI E  &hm LCTRL I &hm LALT O  &to 2
-	&trans  &kp Z       &kp X           &kp C       &kp D           &kp V           &kp C_VOL_UP    &kp C_VOLUME_DOWN   &kp C_PREV  &kp C_NEXT  &kp K           &kp H       &kp COMMA   &kp DOT     &kp FSLH    &to 3
-                                        &trans      &kp TAB         &lt RAISE RET   &kp ESC         &trans              &kp C_PP    &kp SQT     &lt LOWER SPACE &kp BSPC    &trans
+	&trans  &kp Q       &kp W           &kp F       &kp P           &kp B                                                                           &kp J       &kp L       &kp U       &kp Y       &kp SEMI    &to 1
+	&trans  &hm LALT A  &hm LCTRL R     &hm LGUI S  &hm LSHFT T     &kp G                                                                           &kp M       &hm LSHFT N &hm LGUI E  &hm LCTRL I &hm LALT O  &to 2
+	&trans  &kp Z       &kp X           &kp C       &kp D           &kp V           &kp C_VOL_UP    &kp C_VOLUME_DOWN   &kp C_PREV  &kp C_NEXT      &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &to 3
+                                        &trans      &trans          &kp TAB         &lt RAISE RET   &kp ESC             &kp C_PP    &lt LOWER SPACE &kp SQT     &kp BSPC    &trans
 			>;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -63,6 +64,8 @@
 // |    |  1  |  2  |  3   |  4   |  5   |                                      |  6   |  7    | 8  | 9  |  0   |      |
 // |    |     |     |      |      |      |                                      |  ⬅   |  ⬇    | ⬆  | ➡  |      |      |
 //                  |      |      |      |      |        |  |      |      |     |      |       |
+
+// TODO: rearrange numbers to numpad layout
 			bindings = <
     &trans &kp EXCL &kp AT  &kp HASH    &kp DLLR    &kp PRCNT                               &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp LPAR    &kp RPAR    &to 0
 	&trans &kp N1   &kp N2  &kp N3      &kp N4      &kp N5                                  &kp N6      &kp N7      &kp N8          &kp N9      &kp N0      &trans
